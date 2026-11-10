@@ -27,6 +27,21 @@
   </header>
 
   <main class="wrap">
+    <section class="overview" aria-labelledby="overview-title">
+      <h2 id="overview-title">路線總覽地圖</h2>
+      <p class="sub">先看看 10 條路線分布在哪些島上。這張地圖需要網路，離線使用請下載下方的路線檔。</p>
+      <div class="map">
+        <iframe id="overview-map" src="https://www.google.com/maps/d/u/0/embed?mid=1uYjUSNBSo3XAGovUyu-IqhCvUv6Ibww&amp;ehbc=2E312F&amp;noprof=1&amp;ll=26.17,120.2&amp;z=9" title="馬祖步道路線總覽地圖" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <p class="map-link"><a href="https://www.google.com/maps/d/viewer?mid=1uYjUSNBSo3XAGovUyu-IqhCvUv6Ibww&amp;ll=26.17,120.2&amp;z=10" target="_blank" rel="noopener">在 Google 我的地圖中開啟</a></p>
+      <script>
+        (function () {
+          var map = document.getElementById('overview-map');
+          if (map.parentNode.clientWidth >= 560) map.src = map.src.replace('&z=9', '&z=10');
+        })();
+      </script>
+    </section>
+
     <section class="choose" aria-labelledby="choose-title">
       <h2 id="choose-title">該選哪一種格式？</h2>
       <div class="compare">
